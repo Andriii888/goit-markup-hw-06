@@ -860,16 +860,34 @@ color: var(--text-color);
     outline:none;
 }
 
+.modal-form-check-desc{
+font-weight: 400;
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: var(--text-color);
+
+}
+
 .modal-form-check-desc::before{
     content: "";
-    display: block;
+    display: inline-flex;
+
     width: 16px;
     height: 15px;
     border-radius: 2px;
     border: 1px solid var(--primary-text-colorry);
     cursor: pointer;
+    margin: 0;
+}
+.modal-form-check:checked + .modal-form-check-desc::before{
+      background-image: url(../images/check.svg);
+      background-size: contain;
+      background-position: 50% 50%;
+
 }
 
-.modal-form-check:checked + .modal-form-check-desc{
-    background-color: var(--accent-text-color);
+.modal-form-check-link{
+color: var(--accent-text-color);
 }
+
